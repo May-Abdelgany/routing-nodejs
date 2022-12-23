@@ -86,7 +86,7 @@ app.use(homeRouter);
 app.use(aboutRouter);
 app.get("*", (req, res, next) => {
   res.send("404 not found page");
-});
+})
 app.listen(3000, () => {
   console.log("Running server !.......");
 });

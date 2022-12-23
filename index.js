@@ -75,18 +75,18 @@ app.listen(3000, () => {
 const userRouter = require("./modules/user/user.router");
 const homeRouter = require("./modules/home/home.router");
 const aboutRouter = require("./modules/about/about.router")*/
-import express from 'express'
-import userRouter from './modules/user/user.router.js'
-import homeRouter from './modules/home/home.router.js'
-import aboutRouter from './modules/about/about.router.js'
+import express from "express";
+import userRouter from "./modules/user/user.router.js";
+import homeRouter from "./modules/home/home.router.js";
+import aboutRouter from "./modules/about/about.router.js";
 const app = express();
-app.use(express.json())
-app.use(userRouter)
-app.use(homeRouter)
-app.use(aboutRouter)
-app.get('*', (req, res, next) => {
-    res.send("404 not found page")
-})
+app.use(express.json());
+app.use(userRouter);
+app.use(homeRouter);
+app.use(aboutRouter);
+app.get("*", (req, res, next) => {
+  res.send("404 not found page");
+});
 app.listen(3000, () => {
-    console.log("Running server !.......")
-})
+  console.log("Running server !.......");
+});
